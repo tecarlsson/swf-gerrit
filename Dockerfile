@@ -10,7 +10,7 @@ ENV GERRIT_USER gerrit
 # Install OpenJDK and Gerrit in two subsequent transactions
 # (pre-trans Gerrit script needs to have access to the Java command)
 RUN apt-get update
-RUN apt-get -y install openssh-client sudo git openjdk-8-jdk libcgi-pm-perl gitweb
+RUN apt-get -y install openssh-client sudo git openjdk-8-jdk libcgi-pm-perl gitweb libbcprov-java libbcpkix-java
 
 # Need to create path to etc in review site.
 RUN mkdir -p $GERRIT_SITE/etc
